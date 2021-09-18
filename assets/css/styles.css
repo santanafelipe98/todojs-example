@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.header-rectangle {
+    height: 300px;
+    background-color: #B9B7BD;
+}
+
+.page-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.todo-card {
+    margin-top: -180px;
+    width: 450px;
+    min-height: 300px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #B9B7BD;
+    transition-duration: 0.3s;
+}
+
+.input-text-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #EEEDE7;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.input-text {
+    display: flex;
+    flex-grow: 1;
+    height: 3.5rem;
+    padding: 0px 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.input-check {
+    margin-right: 10px;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn .fas, .far, .fab {
+    font-size: 1.5em;
+    color: #868B8E;
+}
+
+.btn-add-todo {
+    width: 64px;
+    height: 3.5rem;
+}
+
+.btn-delete-todo {
+    padding: 5px;
+}
+
+.btn-delete-todo .fas, .far, .fab {
+    color: #E7D2CC;
+}
+
+.btn-clear {
+    padding: 5px;
+    background-color: #E7D2CC;
+    color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.input-label {
+    position: absolute;
+    transition-duration: .2s;
+    font-weight: bold;
+    left: 10px;
+    top: calc(50% - 6pt);
+    color: #B9B7BD;
+}
+
+.focused .input-label {
+    top: 5px;
+    font-size: .7em;
+    font-weight: normal;
+}
+
+.todo-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-list-container {
+    overflow: hidden;
+}
+
+.todo-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 10px;
+    min-height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #f5f5f5;
+    animation: slideup .5s 1 normal linear;
+    flex-wrap: nowrap;
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.todo-description {
+    flex-grow: 1;
+    text-overflow: clip;
+    font-weight: bold;
+}
+
+.all-selector {
+    padding: 10px;
+}
+
+.all-selector label {
+    font-weight: bold;
+    color: #868B8E;
+}
+
+.mt1 {
+    margin-top: 10px;
+}
+
+.mt2 {
+    margin-top: 20px;
+}
+
+.mt3 {
+    margin-top: 30px;
+}
+
+.mt4 {
+    margin-top: 40px;
+}
+
+.mt5 {
+    margin-top: 50px;
+}
+
+.mt6 {
+    margin-top: 60px;
+}
+
+.mt7 {
+    margin-top: 70px;
+}
+
+.mt8 {
+    margin-top: 80px;
+}
+
+.mt9 {
+    margin-top: 90px;
+}
+
+.mt10 {
+    margin-top: 100px;
+}
+
+.deleted {
+    animation: deleted .5s 1 normal ease-out;
+}
+
+footer {
+    margin-top: 20px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #999;
+}
+
+.author {
+    margin-top: 10px;
+    font-weight: 700;
+    color: black;
+}
+
+.year {
+    width: 70px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: .8em;
+    color: #e1e1e1;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile {
+    border: 10px solid #eee;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+
+.profile:hover {
+    transform: scale(1.2);
+}
+
+.repo {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.repo .fa-github {
+    font-size: 1.6em;
+    color: black;
+    margin-right: 10px;
+}
+
+@keyframes slideup {
+    from {
+        margin-top: 10px;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes deleted {
+    from {
+        margin-left: 0;
+        opacity: 1;
+    }
+    to {
+        margin-left: 100%;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .todo-card {
+        width: 90%;
+    }
+}
+
